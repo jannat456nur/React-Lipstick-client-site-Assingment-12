@@ -17,7 +17,7 @@ import './Banner.css'
 // }
 const Banner = () => {
     return (
-        <Container >
+        <Container xs={12} md={12} >
             <Grid container spacing={2}>
                 {/* <Grid item sx={{ mt: 10 }} xs={12} md={6}>
 

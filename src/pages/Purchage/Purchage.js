@@ -9,7 +9,7 @@ const Purchage = () => {
     const [services, setService] = useState([])
     useEffect(() => {
         //load data
-        fetch('./products.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setService(data))
     })
