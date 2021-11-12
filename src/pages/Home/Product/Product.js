@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -28,6 +28,7 @@ const Product = (props) => {
                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
                         {description}
                     </Typography>
+                    <Button variant="contained">Purchage</Button>
 
                 </CardContent>
 
