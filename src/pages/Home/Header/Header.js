@@ -30,7 +30,7 @@ const Header = () => {
                         KARL LIPSTICK QUEEN
                     </Typography>
                     <Link to="/home" ><Button color="inherit" variant="contained" style={{ textDecoration: 'none' }}>HOME</Button></Link>
-                    <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link>
+                    {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
                     <Link to="/addservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>AddUser</Button></Link>
                     <Link to="/purchage" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
                     {
