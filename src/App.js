@@ -10,6 +10,7 @@ import Register from "./Register/Register";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import PrivateRoute from '../src/PrivateRoute/PrivateRoute'
 import Purchage from "./pages/Purchage/Purchage";
+import Addservices from "./pages/AddServices/AddServices";
 
 function App() {
   return (
@@ -36,8 +37,13 @@ function App() {
               <Register></Register>
             </Route>
             <PrivateRoute path="/purchage">
+              <Header></Header>
               <Purchage></Purchage>
             </PrivateRoute>
+            <Route path="/addservices">
+              <Header></Header>
+              <Addservices></Addservices>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
