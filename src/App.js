@@ -26,7 +26,9 @@ function App() {
               <Home></Home>
             </Route>
             <Route path='/explore'>
-              <Explore></Explore>
+              <Header></Header>
+              <Purchage></Purchage>
+              {/* <Explore></Explore> */}
             </Route>
             <Route path='/login'>
               <Header></Header>
@@ -36,14 +38,15 @@ function App() {
               <Header></Header>
               <Register></Register>
             </Route>
-            <PrivateRoute path="/purchage">
+            <PrivateRoute path="/purchage/:serviceId">
               <Header></Header>
-              <Purchage></Purchage>
+              {/* <Purchage></Purchage> */}
+              <Explore></Explore>
             </PrivateRoute>
-            <Route path="/addservices">
+            <PrivateRoute path="/addservices">
               <Header></Header>
               <Addservices></Addservices>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </Router>
       </AuthProvider>

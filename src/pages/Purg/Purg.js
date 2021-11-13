@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -22,12 +23,12 @@ const Purg = (props) => {
                         {name}
                     </Typography>
                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {price}
+                        Price:$ {price}
                     </Typography>
                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
                         {description}
                     </Typography>
-                    <Button variant="contained">Purchage</Button>
+                    <Link to={`/purchage/${_id}`}><Button type="button" value="" variant="contained">Book Now</Button></Link>
 
                 </CardContent>
 

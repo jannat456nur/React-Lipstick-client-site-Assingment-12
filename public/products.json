@@ -1,36 +1,42 @@
 [
     {
         "name": "Fenty Beauty.",
+        "id": 1,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.  Exercitationem nemo?",
         "img": "https://cdn.shopify.com/s/files/1/0100/9257/6804/products/Product-Lip-Sculpt-Color-Still-Open.jpg?v=1628855077",
         "price": "$20"
     },
     {
         "name": "Maybelline.",
+        "id": 2,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, nemo?",
         "img": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/8890327/2019/3/27/37340ec5-0799-45bd-b2e7-3b6775c068dd1553670878226-FACES-CANADA-Women-Lipstick-9391553670877710-1.jpg",
         "price": "$40"
     },
     {
         "name": "Urban Decay.",
+        "id": 3,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, nemo?",
         "img": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/8890321/2019/3/28/0059e322-bcb9-4d78-b2d5-4310f4dca6411553752845053-FACES-CANADA-Buff-Nude-Weightless-Matte-Finish-Lipstick-05-8-1.jpg",
         "price": "$60"
     },
     {
         "name": "Burt's Bees.",
+        "id": 4,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, nemo?",
         "img": "https://images-eu.ssl-images-amazon.com/images/I/31aUGTQca1L._SX300_SY300_QL70_ML2_.jpg",
         "price": "$30"
     },
     {
         "name": "Stila All Day Liquid Lipstick.",
+        "id": 5,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, nemo?",
         "img": "https://images-eu.ssl-images-amazon.com/images/I/31aUGTQca1L._SX300_SY300_QL70_ML2_.jpg",
         "price": "$50"
     },
     {
         "name": "Dior Rouge Lipstick ",
+        "id": 6,
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, nemo?",
         "img": "https://images-eu.ssl-images-amazon.com/images/I/31aUGTQca1L._SX300_SY300_QL70_ML2_.jpg"
     }

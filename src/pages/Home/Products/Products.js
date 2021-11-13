@@ -29,7 +29,7 @@ const Products = () => {
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
                         services.map(service => <Product
-                            key={service.name}
+                            key={service.id}
                             service={service}
                         ></Product>)
                     }
