@@ -7,43 +7,128 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, NavLink } from 'react-router-dom';
-// import useAuth from './../../hooks/useAuth'
-import useAuth from '../../../hooks/useAuth'
 import useFirebase from '../../../hooks/useFirebase';
+import { HashLink } from 'react-router-hash-link';
+import { makeStyles } from '@mui/styles';
+import { useTheme } from '@mui/material';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+
 
 const Header = () => {
     const { logout, user } = useFirebase()
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        KARL LIPSTICK QUEEN
-                    </Typography>
-                    <Link to="/home" ><Button color="inherit" variant="contained" style={{ textDecoration: 'none' }}>HOME</Button></Link>
-                    {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
-                    <Link to="/addservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>AddUser</Button></Link>
-                    <Link to="/explore" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
-                    {
-                        user?.email ?
-                            <Button onClick={logout} color="inherit">Logout</Button> :
-                            <NavLink to="login">
+    const theme = useTheme()
+    const useStyle = makeStyles({
+        navItem: {
+            // color: '#fff',
+            textDecoration: 'none'
+        },
+        navicon: {
+            [theme.breakpoints.up('md')]: {
+                display: 'none'
+            },
 
-                                <Button color="inherit">Login</Button></NavLink>
-                    }
+        },
+        navItemContaned: {
+            [theme.breakpoints.down('md')]: {
+                display: 'none'
+            },
+        },
+        navlogo: {
+            [theme.breakpoints.down('md')]: {
+                textAlign: 'right'
+            },
+        }
+    })
+    const { navItem, navicon, navItemContaned, navlogo } = useStyle()
+    const [state, setState] = React.useState(false);
+    const list = (
+        <Box
+            sx={{ width: 250 }}
+            role="presentation"
+        >
+            <List>
+                <ListItem button >
+                    <Link to="/home">Home</Link>
+                </ListItem>
+                <Divider />
+                <ListItem button >
+                    <Link to="/explore">Explore</Link>
+                </ListItem>
+                <Divider />
+                <ListItem button >
+                    <Link to="/addservices">Addservices</Link>
+                </ListItem>
+                <Divider />
+                {/* <ListItem button >
+                <Link to="home">Home</Link>
+                </ListItem> */}
+                <Divider />
 
-                </Toolbar>
-            </AppBar>
+            </List>
+
+
         </Box>
+    );
+    return (
+        <>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                            className={navicon}
+                            onClick={() => setState(true)}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography className={navlogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            KARL LIPSTICK QUEEN
+                        </Typography>
+                        <Box className={navItemContaned}>
+                            <Link className={navItem} to="/home" ><Button color="inherit" variant="contained" style={{ textDecoration: 'none' }}>HOME</Button></Link>
+                            {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
+                            <HashLink className={navItem} to="/addservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Services</Button></HashLink>
+                            <Link className={navItem} to="/explore" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
+                        </Box>
+                        {
+                            user?.email ?
+                                <Button onClick={logout} color="inherit">Logout</Button> :
+                                <NavLink to="login">
+
+                                    <Button color="inherit">Login</Button></NavLink>
+                        }
+
+                    </Toolbar>
+                </AppBar>
+            </Box>
+            <div>
+
+                <React.Fragment >
+                    {/* <Button onClick={() => setState(true)}>click</Button> */}
+                    <Drawer
+
+                        open={state}
+                        onClose={() => setState(false)}
+
+                    >
+                        {list}
+                    </Drawer>
+                </React.Fragment>
+
+            </div>
+        </>
     );
 };
 

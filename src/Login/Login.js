@@ -45,20 +45,20 @@ const Login = () => {
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="Your Email"
+                            label=" Email"
                             name="email"
                             onChange={handleOnChange}
                             variant="standard" />
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="Your Password"
+                            label=" Password"
                             type="password"
                             name="password"
                             onChange={handleOnChange}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" >Login</Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/register">
@@ -69,7 +69,7 @@ const Login = () => {
                         {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
                     <p>________________________________</p>
-                    <Button onClick={handleGoogleSignIn} variant="contained"><i style={{ gradient: 'black', color: '' }} class="fab fa-google"></i>  Google Sign In</Button>
+                    <Button onClick={handleGoogleSignIn}><i style={{ gradient: 'black', color: '' }} class="fab fa-google"></i>  oogle Sign In</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <img style={{ width: '100%' }} src={login} alt="" />

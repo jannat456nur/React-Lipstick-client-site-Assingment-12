@@ -35,14 +35,14 @@ const Register = () => {
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="Your Name"
+                            label=" Name"
                             name="name"
                             onBlur={handleOnBlur}
                             variant="standard" />
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="Your Email"
+                            label=" Email"
                             name="email"
                             type="email"
                             onBlur={handleOnBlur}
@@ -50,7 +50,7 @@ const Register = () => {
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="Your Password"
+                            label=" Password"
                             type="password"
                             name="password"
                             onBlur={handleOnBlur}
@@ -58,17 +58,17 @@ const Register = () => {
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
-                            label="ReType Your Password"
+                            label="Re-Type  Password"
                             type="password"
                             name="password2"
                             onBlur={handleOnBlur}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" >Register</Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/login">
-                            <Button variant="text">Already Registered? Please Login</Button>
+                            <Button >Already Registered? Please Login</Button>
                         </NavLink>
                     </form>}
                     {isLoading && <CircularProgress />}

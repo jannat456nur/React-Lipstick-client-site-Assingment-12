@@ -11,6 +11,9 @@ import AuthProvider from "./context/AuthProvider/AuthProvider";
 import PrivateRoute from '../src/PrivateRoute/PrivateRoute'
 import Purchage from "./pages/Purchage/Purchage";
 import Addservices from "./pages/AddServices/AddServices";
+import Review from "./pages/Review/Review";
+import NotFound from "./pages/NotFound/NotFound";
+import Addreview from "./pages/Addreview/Addreview";
 
 function App() {
   return (
@@ -38,6 +41,10 @@ function App() {
               <Header></Header>
               <Register></Register>
             </Route>
+            <Route path='/review'>
+              <Header></Header>
+              <Addreview></Addreview>
+            </Route>
             <PrivateRoute path="/purchage/:serviceId">
               <Header></Header>
               {/* <Purchage></Purchage> */}
@@ -47,6 +54,9 @@ function App() {
               <Header></Header>
               <Addservices></Addservices>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>

@@ -19,14 +19,15 @@ const Banner = () => {
     return (
         <Container xs={12} md={12} >
             <Grid container spacing={2}>
-                {/* <Grid item sx={{ mt: 10 }} xs={12} md={6}>
+                <Grid item sx={{ mt: 10 }} xs={12} md={6}>
+
+                    <h1>LIPSTICK QuEEN</h1>
+                    <h3>SHADESHIFTTERS</h3>
 
 
-
-
-                </Grid> */}
+                </Grid>
                 <Grid item xs={12} md={6} sx={{ mt: 10 }} m={0}>
-                    <img style={{ width: '230%' }} src={banner2} alt="" />
+                    <img style={{ width: '100%' }} src={banner} alt="" />
                 </Grid>
 
 
