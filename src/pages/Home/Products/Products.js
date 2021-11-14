@@ -28,10 +28,15 @@ const Products = () => {
             <Container>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
-                        services.map(service => <Product
-                            key={service.id}
-                            service={service}
-                        ></Product>)
+                        window.location.href === 'https://agile-oasis-63624.herokuapp.com/services' ?
+                            services.slice(0, 4).map(service => <Product
+                                key={service.id}
+                                service={service}
+                            ></Product>) :
+                            services.slice(0, 6).map(service => <Product
+                                key={service.id}
+                                service={service}
+                            ></Product>)
                     }
                 </Grid>
             </Container>

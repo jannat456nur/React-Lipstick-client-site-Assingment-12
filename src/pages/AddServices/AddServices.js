@@ -21,10 +21,10 @@ const Addservices = () => {
     return (
         <div className="addservices">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name", { required: true, maxLength: 20 })} />
+                <input {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
                 <input {...register("description")} placeholder="description" />
-                {/* <input type="number" {...register("price")} placeholder="price" /> */}
-                {/* <input {...register("img")} placeholder="img" /> */}
+                <input type="number" {...register("price")} placeholder="price" />
+                <input {...register("img")} placeholder="img url" />
                 <input type="submit" />
             </form>
         </div>

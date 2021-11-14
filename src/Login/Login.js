@@ -39,6 +39,7 @@ const Login = () => {
     return (
         <Container>
             <Grid container spacing={2}>
+
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
@@ -48,7 +49,7 @@ const Login = () => {
                             label=" Email"
                             name="email"
                             onChange={handleOnChange}
-                            variant="standard" />
+                            variant="outlined" />
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
@@ -56,7 +57,7 @@ const Login = () => {
                             type="password"
                             name="password"
                             onChange={handleOnChange}
-                            variant="standard" />
+                            variant="outlined" />
 
                         <Button sx={{ width: '75%', m: 1 }} type="submit" >Login</Button>
                         <NavLink

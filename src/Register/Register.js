@@ -1,7 +1,7 @@
 import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
-import login from '../pages/Home/Banner/login.jpg'
+import login from '../pages/Home/Banner/bannner.jpg'
 import { NavLink, useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import useFirebase from '../hooks/useFirebase';
@@ -37,32 +37,43 @@ const Register = () => {
                             id="standard-basic"
                             label=" Name"
                             name="name"
+                            variant="outlined"
                             onBlur={handleOnBlur}
-                            variant="standard" />
+                        />
+
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label=" Email"
                             name="email"
                             type="email"
+
+                            variant="outlined"
                             onBlur={handleOnBlur}
-                            variant="standard" />
+                        />
+
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label=" Password"
                             type="password"
                             name="password"
+
+                            variant="outlined"
                             onBlur={handleOnBlur}
-                            variant="standard" />
+                        />
+
                         <TextField
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label="Re-Type  Password"
                             type="password"
                             name="password2"
+
+                            variant="outlined"
                             onBlur={handleOnBlur}
-                            variant="standard" />
+                        />
+
 
                         <Button sx={{ width: '75%', m: 1 }} type="submit" >Register</Button>
                         <NavLink
@@ -76,7 +87,7 @@ const Register = () => {
                     {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img style={{ width: '100%' }} src={login} alt="" />
+                    <img style={{ width: '100%' }} sx={{ mt: 8 }} src={login} alt="" />
                 </Grid>
             </Grid>
         </Container>
