@@ -66,10 +66,11 @@ const Header = () => {
                 <ListItem button >
                     <Link to="/addreview">AddReview</Link>
                 </ListItem>
+                <ListItem button >
+                    <Link to="/mangeservices">MyOrders</Link>
+                </ListItem>
                 <Divider />
-                {/* <ListItem button >
-                <Link to="home">Home</Link>
-                </ListItem> */}
+
                 <Divider />
 
             </List>
@@ -101,6 +102,8 @@ const Header = () => {
                             {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
                             <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink>
                             <Link className={navItem} to="/explore" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
+                            <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link>
+                            <span className="text-white">{user?.displayName}</span>
                         </Box>
                         {
                             user?.email ?

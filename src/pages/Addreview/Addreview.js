@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import { useForm } from "react-hook-form";
+import './Addreview.css'
 
 
 const Addreview = () => {
@@ -20,7 +21,7 @@ const Addreview = () => {
             })
     }
     return (
-        <div>
+        <div className='addsereview'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
                 <input {...register("description")} placeholder="description" />

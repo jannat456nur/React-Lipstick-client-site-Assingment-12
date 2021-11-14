@@ -1,0 +1,7 @@
+.addorders form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    text-align: center;
+    }

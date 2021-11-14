@@ -6,7 +6,7 @@ const Explore = () => {
     const { serviceId } = useParams();
     console.log(serviceId)
     useEffect(() => {
-        fetch(`https://agile-oasis-63624.herokuapp.com/services${serviceId}`)
+        fetch(`./products.json ${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

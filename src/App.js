@@ -14,6 +14,8 @@ import Addservices from "./pages/AddServices/AddServices";
 import Review from "./pages/Review/Review";
 import NotFound from "./pages/NotFound/NotFound";
 import Addreview from "./pages/Addreview/Addreview";
+import Purchase from "./pages/Purchase/Purchase";
+import ManageService from "./pages/ManageService/ManageService";
 
 function App() {
   return (
@@ -52,12 +54,18 @@ function App() {
 
             <PrivateRoute path="/purchage/:serviceId">
               <Header></Header>
-              <Explore></Explore>
+              {/* <Explore></Explore> */}
+              <Purchase></Purchase>
             </PrivateRoute>
 
             <PrivateRoute path="/addreview">
               <Header></Header>
               <Addreview></Addreview>
+            </PrivateRoute>
+
+            <PrivateRoute path="/mangeservices">
+              <Header></Header>
+              <ManageService></ManageService>
             </PrivateRoute>
 
             <Route path="*">
