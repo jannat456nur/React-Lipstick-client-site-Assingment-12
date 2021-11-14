@@ -64,7 +64,7 @@ const Header = () => {
                 </ListItem>
                 <Divider />
                 <ListItem button >
-                    <Link to="/addservices">Addservices</Link>
+                    <Link to="/addreview">AddReview</Link>
                 </ListItem>
                 <Divider />
                 {/* <ListItem button >
@@ -99,7 +99,7 @@ const Header = () => {
                         <Box className={navItemContaned}>
                             <Link className={navItem} to="/home" ><Button color="inherit" variant="contained" style={{ textDecoration: 'none' }}>HOME</Button></Link>
                             {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
-                            <HashLink className={navItem} to="/addservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Services</Button></HashLink>
+                            <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink>
                             <Link className={navItem} to="/explore" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
                         </Box>
                         {

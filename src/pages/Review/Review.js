@@ -10,7 +10,7 @@ const Review = () => {
     const [services, setService] = useState([])
     useEffect(() => {
         //load data
-        fetch('./review.json')
+        fetch('https://agile-oasis-63624.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setService(data))
     })

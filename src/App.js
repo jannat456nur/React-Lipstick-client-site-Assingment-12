@@ -50,9 +50,10 @@ function App() {
               {/* <Purchage></Purchage> */}
               <Explore></Explore>
             </PrivateRoute>
-            <PrivateRoute path="/addservices">
+            <PrivateRoute path="/addreview">
               <Header></Header>
-              <Addservices></Addservices>
+              {/* <Addservices></Addservices> */}
+              <Addreview></Addreview>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
