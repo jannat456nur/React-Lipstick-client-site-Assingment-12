@@ -25,39 +25,45 @@ function App() {
             <Route exact path='/'>
               <Home></Home>
             </Route>
+
             <Route path='/home'>
               <Home></Home>
             </Route>
+
             <Route path='/explore'>
               <Header></Header>
               <Purchage></Purchage>
-              {/* <Explore></Explore> */}
             </Route>
+
             <Route path='/login'>
               <Header></Header>
               <Login></Login>
             </Route>
+
             <Route path='/register'>
               <Header></Header>
               <Register></Register>
             </Route>
-            <Route path='/review'>
+
+            {/* <Route path='/review'>
               <Header></Header>
               <Addreview></Addreview>
-            </Route>
+            </Route> */}
+
             <PrivateRoute path="/purchage/:serviceId">
               <Header></Header>
-              {/* <Purchage></Purchage> */}
               <Explore></Explore>
             </PrivateRoute>
+
             <PrivateRoute path="/addreview">
               <Header></Header>
-              {/* <Addservices></Addservices> */}
               <Addreview></Addreview>
             </PrivateRoute>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
+
           </Switch>
         </Router>
       </AuthProvider>

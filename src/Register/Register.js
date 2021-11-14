@@ -10,7 +10,7 @@ const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
     const { user, registerUser, isLoading, authError } = useFirebase();
-
+//create buton handdleing
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;

@@ -9,7 +9,7 @@ import Rvw from '../Rvw/Rvw'
 const Review = () => {
     const [services, setService] = useState([])
     useEffect(() => {
-        //load data
+        //load data from review
         fetch('https://agile-oasis-63624.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setService(data))
@@ -17,9 +17,7 @@ const Review = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
 
-            {/* <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'success.main', m: 2 }} component="div" color="text.secondary">
-            Our Services
-        </Typography> */}
+           
             <Typography variant="h4" sx={{ fontWeight: 'bold', m: 2 }} component="div" color="text.secondary">
                 <h1>    Reviews</h1>
             </Typography>

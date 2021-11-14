@@ -7,13 +7,14 @@ import useAuth from '../hooks/useAuth';
 import useFirebase from '../hooks/useFirebase';
 
 const Login = () => {
+    //distruring
     const [loginData, setLoginData] = useState({});
     const { user, loginUser, signInWithGoogle, isLoading, authError } = useFirebase();
     console.log(user)
-
+//use location and history
     const location = useLocation();
     const history = useHistory();
-
+//button control functionalities
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;

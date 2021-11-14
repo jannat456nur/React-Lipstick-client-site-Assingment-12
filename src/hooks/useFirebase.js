@@ -29,13 +29,14 @@ const useFirebase = () => {
                 });
                 history.replace('/');
             })
+            //error catch
             .catch((error) => {
                 setAuthError(error.message);
                 console.log(error);
             })
             .finally(() => setIsLoading(false));
     }
-
+//log in with email password
     const loginUser = (email, password, location, history) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
@@ -49,7 +50,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
-
+//sign in with google
     const signInWithGoogle = (location, history) => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
@@ -73,7 +74,7 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [])
-
+//logout user
     const logout = () => {
         setIsLoading(true);
         signOut(auth).then(() => {

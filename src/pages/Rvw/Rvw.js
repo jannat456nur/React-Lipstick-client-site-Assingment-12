@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 
 const Rvw = (props) => {
+    //distrucring
     const { img, price, name, description, _id } = props.service;
 
     return (
