@@ -108,9 +108,10 @@ const Header = () => {
                         {
                             user?.email ?
                                 <Box>
-                                    <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link>
+                                    {/* <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link>
                                     <Link className={navItem} to="/pay" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Pay</Button></Link>
                                     <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink>
+                                    <HashLink className={navItem} to="/addproduct" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Product</Button></HashLink> */}
                                     <Link className={navItem} to="/dashboard" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Dashboard</Button></Link>
                                     <Button onClick={logout} color="inherit">Logout</Button>
                                 </Box>

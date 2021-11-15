@@ -18,6 +18,7 @@ import Purchase from "./pages/Purchase/Purchase";
 import Deshboard from '../src/pages/Deshboard/Deshboard/Deshboard'
 import ManageService from "./pages/ManageService/ManageService";
 import Pay from "./pages/Pay/Pay";
+import AddProducts from "./pages/AddProducts/AddProducts";
 
 function App() {
   return (
@@ -63,6 +64,10 @@ function App() {
             <PrivateRoute path="/addreview">
               <Header></Header>
               <Addreview></Addreview>
+            </PrivateRoute>
+            <PrivateRoute path="/addproduct">
+              <Header></Header>
+              <AddProducts></AddProducts>
             </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Header></Header>

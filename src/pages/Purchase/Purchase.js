@@ -12,14 +12,14 @@ const Purchase = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${id}`)
+        fetch(`https://agile-oasis-63624.herokuapp.com/orders/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
 
     // POST DATA TO SERVER
     const onSubmit = data => {
-        axios.post("http://localhost:5000/orders", data)
+        axios.post("https://agile-oasis-63624.herokuapp.com/orders", data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully')

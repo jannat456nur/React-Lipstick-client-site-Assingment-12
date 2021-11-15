@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ManageService = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://agile-oasis-63624.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
@@ -12,7 +12,7 @@ const ManageService = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://agile-oasis-63624.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
