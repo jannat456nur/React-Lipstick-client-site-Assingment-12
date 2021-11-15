@@ -22,6 +22,7 @@ const Addreview = () => {
     }
     return (
         <div className='addsereview'>
+            <h1> Please Add Your Review.</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="name" />
                 <input {...register("description")} placeholder="description" />

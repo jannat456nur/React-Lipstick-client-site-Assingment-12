@@ -100,18 +100,26 @@ const Header = () => {
                         <Box className={navItemContaned}>
                             <Link className={navItem} to="/home" ><Button color="inherit" variant="contained" style={{ textDecoration: 'none' }}>HOME</Button></Link>
                             {/* <Link to="/appointment" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Appointment</Button></Link> */}
-                            <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink>
+                            {/* <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink> */}
                             <Link className={navItem} to="/explore" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Explore More</Button></Link>
-                            <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link>
-                            <span className="text-white">{user?.displayName}</span>
+                            {/* <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link> */}
+
                         </Box>
                         {
                             user?.email ?
-                                <Button onClick={logout} color="inherit">Logout</Button> :
+                                <Box>
+                                    <Link className={navItem} to="/mangeservices" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>MyOrders</Button></Link>
+                                    <Link className={navItem} to="/pay" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Pay</Button></Link>
+                                    <HashLink className={navItem} to="/addreview" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Add Review</Button></HashLink>
+                                    <Link className={navItem} to="/dashboard" ><Button color="inherit" sx={{ ml: 3 }} variant="contained" style={{ textDecoration: 'none' }}>Dashboard</Button></Link>
+                                    <Button onClick={logout} color="inherit">Logout</Button>
+                                </Box>
+                                :
                                 <NavLink to="login">
 
                                     <Button color="inherit">Login</Button></NavLink>
                         }
+                        <span className="text-white"> {user?.displayName}</span>
 
                     </Toolbar>
                 </AppBar>

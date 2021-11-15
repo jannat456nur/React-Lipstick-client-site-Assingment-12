@@ -15,7 +15,9 @@ import Review from "./pages/Review/Review";
 import NotFound from "./pages/NotFound/NotFound";
 import Addreview from "./pages/Addreview/Addreview";
 import Purchase from "./pages/Purchase/Purchase";
+import Deshboard from '../src/pages/Deshboard/Deshboard/Deshboard'
 import ManageService from "./pages/ManageService/ManageService";
+import Pay from "./pages/Pay/Pay";
 
 function App() {
   return (
@@ -61,6 +63,14 @@ function App() {
             <PrivateRoute path="/addreview">
               <Header></Header>
               <Addreview></Addreview>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Header></Header>
+              <Deshboard></Deshboard>
+            </PrivateRoute>
+            <PrivateRoute path="/pay">
+              <Header></Header>
+              <Pay></Pay>
             </PrivateRoute>
 
             <PrivateRoute path="/mangeservices">
