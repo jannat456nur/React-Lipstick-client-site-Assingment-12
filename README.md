@@ -3,4 +3,5 @@
 ### It's privacy is much good and also delivery system  fast .
 ### From this site anyone can see all the products if he/she is not interested to order.
 ###  It's helpful to contact and place order.
-### Live site:
+### here also order place ,add review functionalities .It's a effiecient way to service products.
+### Live site:https://hopeful-franklin-4db227.netlify.app/dashboard
